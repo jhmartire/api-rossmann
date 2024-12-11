@@ -1,4 +1,4 @@
-Boruta==0.4.3
+ Boruta==0.4.3
 Flask==3.0.3
 Werkzeug==3.1.2
 itsdangerous==2.2.0
@@ -12,4 +12,4 @@ requests==2.31.0
 scikit-learn==1.5.2
 seaborn==0.13.2
 xgboost==2.1.1
-
+inflection==0.5.1
