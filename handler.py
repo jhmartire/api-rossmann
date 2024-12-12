@@ -1,3 +1,4 @@
+import os
 import json
 import requests
 import pickle
@@ -6,7 +7,7 @@ from flask import Flask, request, Response, jsonify
 from rossmann.Rossmann import Rossmann
 
 # loading model
-model = pickle.load(open('/Users/jhmartire/repos/ds_producao/model/model_rossmann.pkl', 'rb'))
+model = pickle.load(open('model/model_rossmann.pkl', 'rb'))
 
 # Inicialize API
 app = Flask(__name__)
@@ -44,5 +45,6 @@ def Rossomann_predict():
         return Response('{}', status=200, mimetype='application/json')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    port = os.environ.get( 'PORT', 5000 )
+    app.run(host='0.0.0.0', port=port)
 

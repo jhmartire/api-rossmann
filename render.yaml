@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: my-python-app
-    env: python
-    python_version: 3.11.10  # Defina a versão do Python que você deseja usar
-    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
-    startCommand: python handler.py
-
