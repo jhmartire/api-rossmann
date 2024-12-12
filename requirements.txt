@@ -13,3 +13,4 @@ scikit-learn==1.5.2
 seaborn==0.13.2
 xgboost==2.1.1
 inflection==0.5.1
+gunicorn==21.2.0

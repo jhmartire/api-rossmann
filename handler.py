@@ -12,6 +12,10 @@ model = pickle.load(open('model/model_rossmann.pkl', 'rb'))
 # Inicialize API
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "API Rossmann está funcionando corretamente!", 200
+
 @app.route('/rossmann/predict', methods=['POST'])
 def Rossomann_predict():
 
